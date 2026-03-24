@@ -8,8 +8,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "GeneralSans", sans-serif;
-  font-size: 20px;
-  font-weight: 400;
 }
 
 body {
@@ -20,7 +18,7 @@ body {
 }
 
 .app {
-  background: #161224;
+  background: #ffffff;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -28,30 +26,14 @@ body {
   align-items: center;
 }
 
-.test {
-  background: #09ff09;
+.letter-container {
+  background-color: #00ffff;
   padding: 2px 4px;
-  animation: pulse 0.2s linear infinite alternate;
+  border-radius: 1rem;
 }
 
-@keyframes pulse {
-  0% {
-    background: #09ff09;
-    color: #000;
-  }
-
-  50% {
-    background: #09ff09;
-    color: #000;
-  }
-
-  51% {
-    background: #022802;
-    color: #09ff09;
-  }
-
-  100% {
-    background: #022802;
-    color: #8bff07;
-  }
+.letter-text {
+  color: #085c5c;
+  font-size: 4rem;
+  font-weight: 400;
 }

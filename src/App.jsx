@@ -1,9 +1,9 @@
-import Test from './components/test';
+import LiquidLetter from './components/liquid-letter';
 
 const App = () => {
   return (
     <div className="app">
-      <Test />
+      <LiquidLetter />
     </div>
   )
 }
