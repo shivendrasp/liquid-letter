@@ -1,0 +1,120 @@
+:root {
+  --letter-gradient: linear-gradient(
+   to top,
+  #ffffff 0%,
+  #67aeff 20%,
+  #144bff 40%,
+  #203ed6 60%,
+  #ffffff 100%
+);
+}
+
+.LiquidLetterContainer {
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 0 20px 10px #9181ff;
+  background: #4a74f1;
+  backdrop-filter: blur(1px);
+}
+
+.letterContainer {
+  background: var(--letter-gradient);
+  background-size: 200% 200%;
+  animation: gradient 4s linear infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  /* filter: hue-rotate(220deg) contrast(1.2) saturate(1) invert(); */
+  mix-blend-mode: difference;
+}
+
+.letterInsetShadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #4949eb0d;
+  box-shadow: inset 0 0 20px 2px #ffffff;
+  mix-blend-mode: normal;
+  overflow: visible;
+}
+
+
+.maskDef {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: visible;
+}
+
+.SvgText {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  overflow: visible;
+  z-index: 4;
+}
+
+.Noise {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: visible;
+}
+
+.letterTextGradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--letter-gradient);
+  background-size: 200% 200%;
+  animation: gradientText 4s linear infinite;
+  z-index: 2;
+  -webkit-mask-image: url(#letter-text);
+  mask-image: url(#letter-text);
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  filter: blur(40px);
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 50% -100%;
+
+  }
+  100% {
+    background-position: 50% 100%;
+  }
+}
+
+@keyframes gradientText {
+  0% {
+    background-position: 50% 100%;
+
+  }
+  100% {
+    background-position: 50% -100%;
+  }
+}
+
+
+/* #fff 0%,
+#31f5ff 20%,
+#14a1ff 40%,
+#185dff 80%,
+#fff 100% */

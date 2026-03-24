@@ -1,4 +1,4 @@
-import LiquidLetter from './components/liquid-letter';
+import LiquidLetter from './components/liquid-letter/liquid-letter';
 
 const App = () => {
   return (
